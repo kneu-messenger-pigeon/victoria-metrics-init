@@ -1,4 +1,4 @@
-package victoria_metrics_init
+package victoriaMetricsInit
 
 import (
 	"fmt"
