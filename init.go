@@ -11,7 +11,10 @@ const defaultHost = "victoria-metrics:8428"
 
 var defaultTimeInterval = 10 * time.Second
 
+var LastInstance string
+
 func InitMetrics(instance string) {
+	LastInstance = instance
 	host := os.Getenv("VICTORIA_METRICS_HOST")
 	if host == "" {
 		host = defaultHost

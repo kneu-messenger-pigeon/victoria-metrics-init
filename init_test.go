@@ -35,6 +35,8 @@ func TestInitMetrics(t *testing.T) {
 		runtime.Gosched()
 		time.Sleep(defaultTimeInterval + time.Millisecond*500)
 		assert.True(t, gock.IsDone())
+
+		assert.Equal(t, "testInstance", LastInstance)
 	})
 
 	t.Run("errors", func(t *testing.T) {
