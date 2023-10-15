@@ -1,0 +1,11 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    uses: kneu-messenger-pigeon/github-workflows/.github/workflows/test.yaml@main
+    secrets: inherit
+
